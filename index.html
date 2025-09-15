@@ -1,36 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title> Static Web Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f2f2f2;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    p {
-      font-size: 18px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #db348d;
-      color: white;
-      text-decoration:solid;
-      border-radius: 5px;
-    }
-    .btn:hover {
-      background-color: #2980b9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World - Travel Website</title>
 </head>
-<body>
-  <h1>Welcome to My Web Page</h1>
-  <p>This is a static web page hosted on GitHub Pages.</p>
-  <a class="btn" href="https://github.com">Visit GitHub</a>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f8f9fa;">
+
+    <!-- Header -->
+    <header style="background-color: #1e90ff; color: white; padding: 20px; text-align: center;">
+        <h1>🌍 Explore World</h1>
+        <p>Your Ultimate Travel Guide</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav style="background-color: #0d6efd; text-align: center; padding: 12px;">
+        <a href="#home" style="color: white; margin: 15px; text-decoration: none; font-weight: bold;">Home</a>
+        <a href="#destinations" style="color: white; margin: 15px; text-decoration: none; font-weight: bold;">Destinations</a>
+        <a href="#gallery" style="color: white; margin: 15px; text-decoration: none; font-weight: bold;">Gallery</a>
+        <a href="#contact" style="color: white; margin: 15px; text-decoration: none; font-weight: bold;">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" style="text-align: center; padding: 40px; background-color: #eaf6ff;">
+        <h2>Discover Beautiful Places</h2>
+        <p>Travel the world, explore cultures, and create memories!</p>
+        <img src="https://via.placeholder.com/900x350" alt="Travel Banner" style="width: 80%; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" style="padding: 30px; text-align: center; background-color: #ffffff;">
+        <h2>Top Destinations 🌴</h2>
+        <div style="display: flex; justify-content: center; gap: 25px; margin-top: 20px; flex-wrap: wrap;">
+
+            <!-- Destination 1 -->
+            <div style="background-color: #f0f8ff; padding: 15px; width: 280px; border-radius: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.2);">
+                <img src="https://via.placeholder.com/250x150" alt="Paris" style="width: 100%; border-radius: 10px;">
+                <h3>Paris, France</h3>
+                <p>The city of love and lights. Visit the Eiffel Tower and enjoy luxury shopping.</p>
+                <button style="background-color: #1e90ff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Explore</button>
+            </div>
+
+            <!-- Destination 2 -->
+            <div style="background-color: #f0f8ff; padding: 15px; width: 280px; border-radius: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.2);">
+                <img src="https://via.placeholder.com/250x150" alt="Maldives" style="width: 100%; border-radius: 10px;">
+                <h3>Maldives</h3>
+                <p>Experience white sandy beaches, turquoise waters, and beautiful resorts.</p>
+                <button style="background-color: #1e90ff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Explore</button>
+            </div>
+
+            <!-- Destination 3 -->
+            <div style="background-color: #f0f8ff; padding: 15px; width: 280px; border-radius: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.2);">
+                <img src="https://via.placeholder.com/250x150" alt="Tokyo" style="width: 100%; border-radius: 10px;">
+                <h3>Tokyo, Japan</h3>
+                <p>Discover modern skyscrapers, delicious sushi, and ancient temples in Tokyo.</p>
+                <button style="background-color: #1e90ff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" style="padding: 30px; text-align: center; background-color: #f8f9fa;">
+        <h2>Travel Gallery 📸</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
+            <img src="https://via.placeholder.com/250x150" alt="Image 1" style="border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.3);">
+            <img src="https://via.placeholder.com/250x150" alt="Image 2" style="border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.3);">
+            <img src="https://via.placeholder.com/250x150" alt="Image 3" style="border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.3);">
+            <img src="https://via.placeholder.com/250x150" alt="Image 4" style="border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.3);">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 30px; text-align: center; background-color: #ffffff;">
+        <h2>Contact Us 📩</h2>
+        <p>Email: explore@world.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #1e90ff; color: white; text-align: center; padding: 15px;">
+        &copy; 2025 Explore World | All Rights Reserved
+    </footer>
+
 </body>
 </html>
