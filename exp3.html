@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf3f7;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        h1 {
+            color: #d63384;
+            margin-top: 20px; 
+        }
+
+        hr {
+            width: 60%;
+            border: 1px solid #ff66a3;
+            margin: 15px auto;
+        }
+
+        /* Section Headings */
+        h2 {
+            color: #ff3399;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        p {
+            width: 70%;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* Skills & Projects List */
+        ul, ol {
+            list-style: none;
+            padding: 0;
+            margin: auto;
+            width: 250px;
+            text-align: left;
+        }
+
+        ul li, ol li {
+            background-color: #ffe6f0;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        ul li:hover, ol li:hover {
+            background-color: #ffb3d9;
+            transform: scale(1.05);
+        }
+
+        /* Contact Form */
+        form {
+            margin-top: 20px;
+            background-color: #fff0f5;
+            padding: 15px;
+            width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ff99cc;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #d63384;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: #ff3399;
+            box-shadow: 0 0 5px #ff66b2;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #ff3399;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e60073;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 25px;
+            padding: 10px;
+            background-color: #ffccdd;
+            color: #660033;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <h1>Welcome to My Portfolio</h1>
+    <hr>
+
+    <!-- About Section -->
+    <h2>About Me</h2>
+    <p>
+        Hello! My name is <b>Anu Raga</b>. I am an 
+        <b>Electronics and Communication Engineering</b> student 
+        with a keen interest in <b>Web Development</b> and 
+        <b>Software Development</b>. 
+        I enjoy learning new technologies and building creative projects.
+    </p>
+
+    <!-- Skills Section -->
+    <h2>My Skills</h2>
+    <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python & Artificial Intelligence</li>
+    </ul>
+
+    <!-- Projects Section -->
+    <h2>Projects</h2>
+    <ol>
+        <li>AI Voice Shopping Assistant</li>
+        <li>Weather Forecast Website</li>
+        <li>Portfolio Website</li>
+    </ol>
+
+    <!-- Contact Section -->
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 My Portfolio | Designed by <b>Anu Raga</b>
+    </footer>
+
+</body>
+</html>
