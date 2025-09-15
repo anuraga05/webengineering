@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Event Registration</h2>
+    <form id="regForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <span class="error" id="nameError"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <span class="error" id="emailError"></span>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number">
+      <span class="error" id="phoneError"></span>
+
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="">--Select--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <span class="error" id="genderError"></span>
+
+      <label for="event">Select Event</label>
+      <select id="event">
+        <option value="">--Choose Event--</option>
+        <option value="workshop">AI & ML Workshop</option>
+        <option value="hackathon">Hackathon 2025</option>
+        <option value="seminar">Tech Seminar</option>
+      </select>
+      <span class="error" id="eventError"></span>
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" rows="3" placeholder="Write something..."></textarea>
+
+      <button type="submit">Register Now</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent form from submitting
+
+      let valid = true;
+
+      // Get form values
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let gender = document.getElementById("gender").value;
+      let event = document.getElementById("event").value;
+
+      // Regex for validation
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      let phonePattern = /^[0-9]{10}$/;
+
+      // Clear old errors
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+      // Name validation
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required";
+        valid = false;
+      }
+
+      // Email validation
+      if (!email.match(emailPattern)) {
+        document.getElementById("emailError").textContent = "Enter a valid email";
+        valid = false;
+      }
+
+      // Phone validation
+      if (!phone.match(phonePattern)) {
+        document.getElementById("phoneError").textContent = "Enter 10-digit phone number";
+        valid = false;
+      }
+
+      // Gender validation
+      if (gender === "") {
+        document.getElementById("genderError").textContent = "Select your gender";
+        valid = false;
+      }
+
+      // Event validation
+      if (event === "") {
+        document.getElementById("eventError").textContent = "Select an event";
+        valid = false;
+      }
+
+      // If valid, submit
+      if (valid) {
+        alert("Registration Successful ✅");
+        document.getElementById("regForm").reset();
+      }
+    });
+  </script>
+</body>
+</html>
